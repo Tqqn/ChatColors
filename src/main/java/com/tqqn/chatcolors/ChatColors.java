@@ -1,6 +1,7 @@
 package com.tqqn.chatcolors;
 
 import com.tqqn.chatcolors.colors.Colors;
+import com.tqqn.chatcolors.commands.ChooseChatColorCommand;
 import com.tqqn.chatcolors.listeners.ChatListener;
 import com.tqqn.chatcolors.listeners.InteractInventoryListener;
 import com.tqqn.chatcolors.listeners.JoinListener;
@@ -22,6 +23,7 @@ public final class ChatColors extends JavaPlugin {
         this.playerManager = new PlayerManager(this);
         loadColors();
         registerListeners();
+        registerCommands();
     }
 
     @Override
@@ -42,6 +44,10 @@ public final class ChatColors extends JavaPlugin {
         pluginManager.registerEvents(new JoinListener(playerManager), this);
         pluginManager.registerEvents(new QuitListener(playerManager), this);
         pluginManager.registerEvents(new InteractInventoryListener(playerManager), this);
+    }
+
+    private void registerCommands() {
+        this.getCommand("chatcolor").setExecutor(new ChooseChatColorCommand(playerManager));
     }
 
     public HashMap<Material, Colors> getLoadedColors() {
