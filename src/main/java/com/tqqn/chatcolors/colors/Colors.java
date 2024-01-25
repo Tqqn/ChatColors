@@ -5,13 +5,13 @@ import org.bukkit.Material;
 public enum Colors {
 
     NONE("", "None", Material.BARRIER),
-    BLACK("&0", "Black", Material.BLACK_WOOL),
-    DARK_RED("&4", "Dark Red", Material.REDSTONE);
+    BLACK("<black>", "Black", Material.BLACK_WOOL),
+    DARK_RED("<dark_red>", "Dark Red", Material.REDSTONE);
 
     private final String color;
     private final String prettyName;
     private final Material guiMaterial;
-    private int size;
+    private final int size;
     Colors(String color, String prettyName, Material guiMaterial) {
         this.color = color;
         this.prettyName = prettyName;
