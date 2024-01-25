@@ -14,6 +14,7 @@ Required Features:
 * Easy to add new existing chatcolors or hex colors.
 
 Udemy: https://www.udemy.com/course/develop-minecraft-plugins-java-programming/
+
 Suggested Lectures:
 * Lecture 10-14: Java Basics
 * Lecture 16: Events
